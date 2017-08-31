@@ -4,13 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Http\Requests\CreateArticleRequest;
+use Illuminate\Support\Facades\Session;
 use Request;
+use Auth;
 
 class ArticlesController extends Controller
 {
-        /*
-        * Pobieramy listę artykułów
-        */
+    public function __construct()
+    {
+        $this->middleware('auth', ['only'=>'create']);
+    }
+
+    /*
+    * Pobieramy listę artykułów
+    */
 
     public function index()
     {
@@ -39,7 +46,9 @@ class ArticlesController extends Controller
          */
     public function store(CreateArticleRequest $request)
     {
-        Article::create($request->all());
+        $article = new Article($request->all());
+        Auth::user()->articles()->save($article);
+        Session::flash('article_created','Twój artykuł został dodany');
         return redirect('articles');
     }
 
@@ -59,6 +68,6 @@ class ArticlesController extends Controller
     {
         $article = Article::findOrFail($id);
         $article->update($request->all());
-        return redirect('articles');
+        return redirect('articles/'.$id);
     }
 }
