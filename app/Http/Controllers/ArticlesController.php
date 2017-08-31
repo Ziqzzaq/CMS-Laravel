@@ -9,7 +9,19 @@ class ArticlesController extends Controller
 {
     public function index()
     {
+        /*
+         * Pobieramy listę artykułów
+         */
         $articles = Article::latest()->get();
-        return view('articles.index')->with('articles',$articles);
+        return view('articles.index')->with('articles', $articles);
     }
+        /*
+         * Jeden artykułów
+         */
+    public function show($id)
+    {
+        $article = Article::find($id);
+        return view('articles.show')->with('article',$article);
+    }
+
 }
