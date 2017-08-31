@@ -113,11 +113,18 @@ a, .btn-link {
 	font-size: 16px;
 	display:block;
 }
+
 .article-date {
 	color: #2b1459;
 	font-size: 12px;
+	display: inline;
 }
 
+.read-more {
+	color: #245269;
+	font-size: 16px;
+	float: right;
+}
 /* Strona pojedycznego video */
 .single-article-content {
 	padding: 16px;
