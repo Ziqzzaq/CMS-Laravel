@@ -4,6 +4,13 @@
     <div class="articles-header card">
         <h2>Najnowsze artykuły</h2>
     </div>
+
+    @if( Session::has('article_created'))
+        <div class="alert alert-success card">
+            {{ Session::get('article_created') }}
+        </div>
+    @endif
+
     <div class="row">
 
         @foreach($articles as $article)
