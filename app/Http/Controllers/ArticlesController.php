@@ -42,4 +42,23 @@ class ArticlesController extends Controller
         Article::create($request->all());
         return redirect('articles');
     }
+
+    /*
+     * Formularz edycji artykułu
+     */
+    public function edit($id)
+    {
+        $article = Article::findOrFail($id);
+        return view('articles.edit')->with('article',$article);
+    }
+
+    /*
+     * Aktualizuja artykułu
+     */
+    public function update($id, CreateArticleRequest $request)
+    {
+        $article = Article::findOrFail($id);
+        $article->update($request->all());
+        return redirect('articles');
+    }
 }

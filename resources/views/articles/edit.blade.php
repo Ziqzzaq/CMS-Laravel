@@ -9,9 +9,9 @@
 
                     @include('articles.form_errors')
 
-                    {!! Form::open(['url'=>'articles','class'=>'form-horizontal']) !!}
+                    {!! Form::model($article, ['method'=>'PATCH', 'class'=>'form-horizontal', 'action'=>['ArticlesController@update', $article->id]]) !!}
 
-                        @include('articles.form',['buttonText'=>'Dodaj artykuł'])
+                        @include('articles.form',['buttonText'=>'Zapisz zmiany'])
 
                     {!! Form::close() !!}
                 </div>
