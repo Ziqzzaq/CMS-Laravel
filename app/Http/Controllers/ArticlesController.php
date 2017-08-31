@@ -57,7 +57,7 @@ class ArticlesController extends Controller
      */
     public function update($id, CreateArticleRequest $request)
     {
-        $article = Article::findOfFail($id);
+        $article = Article::findOrFail($id);
         $article->update($request->all());
         return redirect('articles');
     }
