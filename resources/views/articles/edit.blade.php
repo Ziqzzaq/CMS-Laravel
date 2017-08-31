@@ -11,7 +11,7 @@
 
                     {!! Form::model($article, ['method'=>'PATCH', 'class'=>'form-horizontal', 'action'=>['ArticlesController@update', $article->id]]) !!}
 
-                        @include('articles.form')
+                        @include('articles.form',['buttonText'=>'Zapisz zmiany'])
 
                     {!! Form::close() !!}
                 </div>

@@ -18,6 +18,6 @@
 
 <div class="form-group">
     <div class="col-md-6 col-md-offset-4">
-        {!! Form::submit('Dodaj artykuł',['class'=>'btn btn-primary']) !!}
+        {!! Form::submit($buttonText,['class'=>'btn btn-primary']) !!}
     </div>
 </div>

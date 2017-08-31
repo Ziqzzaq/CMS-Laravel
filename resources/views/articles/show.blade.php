@@ -30,9 +30,9 @@
                 <span class="upper-label">Dodał</span>
                 <span class="article-author">Michał Borzęcki</span>
                 <div class="edit-button">
-                    <button class="btn btn-primary btn-lg">
+                    <a href="{{ action('ArticlesController@edit', $article->id) }}" class="btn btn-primary btn-lg">
                         Edytuj Video
-                    </button>
+                    </a>
                 </div>
             </div>
 

@@ -11,7 +11,7 @@
 
                     {!! Form::open(['url'=>'articles','class'=>'form-horizontal']) !!}
 
-                        @include('articles.form')
+                        @include('articles.form',['buttonText'=>'Dodaj artykuł'])
 
                     {!! Form::close() !!}
                 </div>
