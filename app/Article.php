@@ -8,6 +8,15 @@ class Article extends Model
 {
     protected $fillable = [
         'title',
-        'contents'
+        'contents',
+        'user_id'
     ];
+
+    /*
+     * Artykuł ma swojego autora
+     */
+    public function user()
+    {
+        return$this->belongsTo('App\User');
+    }
 }

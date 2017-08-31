@@ -1,3 +1,4 @@
+{!! Form::hidden('user_id',1) !!}
 <div class="form-group">
     <div class="col-md-4 control-label">
         {!! Form::label('title','Tytuł') !!}
