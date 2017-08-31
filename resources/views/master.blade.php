@@ -48,15 +48,15 @@
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
                 <li><a href="/articles">Start</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/about">About us</a></li>
+                <li><a href="/contact">Kontakt</a></li>
+                <li><a href="/about">O nas</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
-                <li><a href="login.html">Sign in</a></li>
-                <li><a href="">Sign up</a></li>
+                <li><a href="/login">Zaloguj</a></li>
+                <li><a href="/register">Rejestracja</a></li>
             </ul>
         </div>
     </div>
