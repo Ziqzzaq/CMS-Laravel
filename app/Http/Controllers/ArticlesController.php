@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Article;
-use Illuminate\Http\Request;
+use Request;
 
 class ArticlesController extends Controller
 {
+        /*
+        * Pobieramy listę artykułów
+        */
+
     public function index()
     {
-        /*
-         * Pobieramy listę artykułów
-         */
         $articles = Article::latest()->get();
         return view('articles.index')->with('articles', $articles);
     }
@@ -24,4 +25,21 @@ class ArticlesController extends Controller
         return view('articles.show')->with('article',$article);
     }
 
+        /*
+         * Wyswietla formularz dodawania artykułu
+         */
+    public function create()
+    {
+        return view('articles.create');
+    }
+
+        /*
+         * Zapisuje artykuł do bazy
+         */
+    public function store()
+    {
+        $input = Request::all();
+        Article::create($input);
+        return redirect('articles');
+    }
 }
