@@ -19,7 +19,7 @@
                         <h4>{{$article->title}}</h4>
                         <p>{{$article->contents}}</p>
                         <span class="upper-label">Dodał</span>
-                        <span class="article-author">Michał Borzęcki</span>
+                        <span class="article-author">{{ $article->user->name }}</span>
                         <span class="article-date">Utworzony: {{$article->created_at}}</span>
                         <a class="read-more" href="{{ url('articles', $article->id) }}">Czytaj więcej...</a>
                     </div>

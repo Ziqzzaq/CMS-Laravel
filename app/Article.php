@@ -8,7 +8,8 @@ class Article extends Model
 {
     protected $fillable = [
         'title',
-        'contents'
+        'contents',
+        'user_id'
     ];
 
     /*
