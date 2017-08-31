@@ -10,9 +10,26 @@
                     {!! Form::open(['url'=>'articles','class'=>'form-horizontal']) !!}
 
                         <div class="form-group">
-                            <label for="" class="col-md-4 control-label">Tytuł</label>
+                            <div class="col-md-4 control-label">
+                                {!! Form::label('title','Tytuł') !!}
+                            </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" />
+                                {!! Form::text('title',null,['class'=>'form-control']) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-4 control-label">
+                                {!! Form::label('contents','Treść') !!}
+                            </div>
+                            <div class="col-md-6">
+                                {!! Form::textarea('contents',null,['class'=>'form-control']) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                {!! Form::submit('Dodaj artykuł',['class'=>'btn btn-primary']) !!}
                             </div>
                         </div>
 
