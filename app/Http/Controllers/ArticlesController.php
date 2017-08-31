@@ -7,11 +7,12 @@ use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
+        /*
+        * Pobieramy listę artykułów
+        */
+
     public function index()
     {
-        /*
-         * Pobieramy listę artykułów
-         */
         $articles = Article::latest()->get();
         return view('articles.index')->with('articles', $articles);
     }
@@ -22,6 +23,14 @@ class ArticlesController extends Controller
     {
         $article = Article::findOrFail($id);
         return view('articles.show')->with('article',$article);
+    }
+
+        /*
+         * Wyswietla formularz dodawania artykułu
+         */
+    public function create()
+    {
+        return view('articles.create');
     }
 
 }

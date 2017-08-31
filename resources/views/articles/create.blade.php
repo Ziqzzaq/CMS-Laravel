@@ -1,0 +1,1 @@
+<h2>Nowy artykuł!</h2>
