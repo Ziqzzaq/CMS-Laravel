@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Http\Requests\CreateArticleRequest;
 use Request;
 
 class ArticlesController extends Controller
@@ -36,10 +37,9 @@ class ArticlesController extends Controller
         /*
          * Zapisuje artykuł do bazy
          */
-    public function store()
+    public function store(CreateArticleRequest $request)
     {
-        $input = Request::all();
-        Article::create($input);
+        Article::create($request->all());
         return redirect('articles');
     }
 }
