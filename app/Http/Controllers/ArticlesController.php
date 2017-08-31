@@ -51,4 +51,14 @@ class ArticlesController extends Controller
         $article = Article::findOrFail($id);
         return view('articles.edit')->with('article',$article);
     }
+
+    /*
+     * Aktualizuja artykułu
+     */
+    public function update($id, CreateArticleRequest $request)
+    {
+        $article = Article::findOfFail($id);
+        $article->update($request->all());
+        return redirect('articles');
+    }
 }
