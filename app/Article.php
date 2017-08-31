@@ -10,4 +10,12 @@ class Article extends Model
         'title',
         'contents'
     ];
+
+    /*
+     * Artykuł ma swojego autora
+     */
+    public function user()
+    {
+        return$this->belongsTo('App\User');
+    }
 }
