@@ -30,7 +30,7 @@ class User extends Authenticatable
     /*
      * Użytkownik jest autorem wielu artykułów
      */
-    public function articles
+    public function articles()
     {
         return $this->hasMany('App\Article');
     }
