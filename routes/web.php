@@ -17,4 +17,5 @@ Route::get('/', function () {
 
 Route::get('/contact', 'MainPagesController@contact');
 Route::get('/about', 'MainPagesController@about');
-Route::get('/news', 'MainPagesController@news');
+
+Route::get('/articles', 'ArticlesController@index');

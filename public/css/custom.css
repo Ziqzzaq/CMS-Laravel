@@ -58,14 +58,14 @@ a, .btn-link {
 }
 
 /* Wspolne style */
-.videos-header {
+.articles-header {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	padding-left: 20px;
 	margin-bottom: 30px;
 }
 
-.videos-header h2 {
+.articles-header h2 {
 	padding: 0;
 	margin: 0;
 }
@@ -80,7 +80,7 @@ a, .btn-link {
   	background-color: #FFFFFF;
 }
 
- .single-video {
+ .single-article {
     min-height: 360px;
     margin-bottom: 50px;
 }
@@ -108,23 +108,28 @@ a, .btn-link {
 	font-size: 12px;
 }
 
-.video-author {
+.article-author {
 	color: #727272;
 	font-size: 16px;
+	display:block;
+}
+.article-date {
+	color: #2b1459;
+	font-size: 12px;
 }
 
 /* Strona pojedycznego video */
-.single-video-content {
+.single-article-content {
 	padding: 16px;
 }
 
-.single-video-content h4 {
+.single-article-content h4 {
 	margin-top: 20px;
 	margin-bottom: 5px;
 }
 
 
-.single-video-content p {
+.single-article-content p {
 	margin-bottom: 0;
 	color: #727272;
 }
@@ -146,7 +151,7 @@ a, .btn-link {
 }
 
 /* Box w prawej kolumnie */
-.single-video-right .card {
+.single-article-right .card {
 	margin-bottom: 30px;
 }
 .right-col-box {

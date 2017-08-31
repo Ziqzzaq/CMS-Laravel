@@ -18,9 +18,5 @@ class MainPagesController extends Controller
 	{
 		return view('pages.about');
 	}
-	
-	public function news()
-	{
-		return view('pages.news');
-	}
+
 }
