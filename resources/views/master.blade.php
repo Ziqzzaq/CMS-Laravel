@@ -51,13 +51,19 @@
                 <li><a href="/contact">Kontakt</a></li>
                 <li><a href="/about">O nas</a></li>
             </ul>
-
             <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav navbar-right">
-                <!-- Authentication Links -->
-                <li><a href="/login">Zaloguj</a></li>
-                <li><a href="/register">Rejestracja</a></li>
-            </ul>
+            @if(Auth::check())
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links -->
+                    <li><a href="/logout">Wyloguj</a></li>
+                </ul>
+            @else
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links -->
+                    <li><a href="/login">Zaloguj</a></li>
+                    <li><a href="/register">Rejestracja</a></li>
+                </ul>
+            @endif
         </div>
     </div>
 </nav>

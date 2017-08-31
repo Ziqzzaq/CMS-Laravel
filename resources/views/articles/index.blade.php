@@ -24,7 +24,7 @@
                     </div>
                     <div class="card-content">
                         <h4>{{$article->title}}</h4>
-                        <p>{{$article->contents}}</p>
+                        <p>{{ str_limit($article->contents, $limit=80) }}</p>
                         <span class="upper-label">Dodał</span>
                         <span class="article-author">{{ $article->user->name }}</span>
                         <span class="article-date">Utworzony: {{$article->created_at}}</span>
