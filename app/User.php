@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use App\Notifications\ResetPassword as ResetPasswordNotification;
 class User extends Authenticatable
 {
     use Notifiable;
@@ -33,5 +33,10 @@ class User extends Authenticatable
     public function articles()
     {
         return $this->hasMany('App\Article');
+    }
+    public function sendPasswordResetNotification($token)
+    {
+        // My own implementation.
+        $this->notify(new ResetPasswordNotification($token));
     }
 }

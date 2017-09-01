@@ -68,3 +68,4 @@ cmake-build-debug/
 .idea_modules/
 
 # JIRA plugin
+\.idea/kurs_Laravel\.iml

@@ -84,7 +84,7 @@
 <!-- Footer -->
 <footer class="site-footer">
     <div class="container">
-        <p>&copy; CMS-ziqzzaq.web</p>
+        <p>&copy; CMS - Individual Technology Studio</p>
     </div>
 </footer>
 
